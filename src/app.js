@@ -5,15 +5,15 @@ class App {
   constructor() {
     this.server = express();
     this.middlewears();
-    this.routes();    
+    this.routes();
   }
+
   middlewears() {
     this.server.use(express.json());
-
   }
+
   routes() {
     this.server.use(routes);
-
   }
 }
-module.exports = new App().server;
+export default new App().server;
